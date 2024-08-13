@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calculadora(num1, num2, operacao) {
+    switch (operacao) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            if (num2 !== 0) {
+                return num1 / num2;
+            } else {
+                return "Divisão por zero";
+            }
+        default:
+            return "Operação inválida";
+    }
+}
+
+// Teste
+console.log(calculadora(10, 5, '+')); // 15
+console.log(calculadora(10, 5, '-')); // 5
+console.log(calculadora(10, 5, '*')); // 50
+console.log(calculadora(10, 0, '/')); // Divisão por zero
+
+    </script>
+    
+</body>
+</html>
