@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com o DOM</title>
+    <link rel="stylesheet" href="DOM.css">
+ 
+</head>
+<body>
+    <h1>Captura e Exibição de Texto</h1>
+    <input type="text" id="texto" placeholder="Digite algo aqui">
+    <button id="botao">Exibir Texto</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Captura os elementos do DOM
+        const inputTexto = document.getElementById('texto');
+        const botao = document.getElementById('botao');
+        const resultado = document.getElementById('resultado');
+
+        // Função para exibir o texto
+        function exibirTexto() {
+            const valor = inputTexto.value.trim(); // Captura o valor do input e remove espaços em branco nas extremidades
+
+            if (valor === '') {
+                resultado.textContent = 'Por favor, insira um texto.';
+            } else {
+                resultado.textContent = `Você digitou: ${valor}`;
+            }
+        }
+
+        // Adiciona o evento de clique ao botão
+        botao.addEventListener('click', exibirTexto);
+    </script>
+</body>
+</html>

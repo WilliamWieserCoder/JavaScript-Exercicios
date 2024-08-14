@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração de Estilos via DOM</title>
+  <link rel="stylesheet" href="DOM.css">
+</head>
+<body>
+    <h1 id="titulo">Meu Título</h1>
+    <button id="btnAzul">Mudar para Azul</button>
+    <button id="btnVerde">Mudar para Verde</button>
+
+    <script>
+        // Captura os elementos do DOM
+        const titulo = document.getElementById('titulo');
+        const btnAzul = document.getElementById('btnAzul');
+        const btnVerde = document.getElementById('btnVerde');
+
+        // Função para mudar a cor do título
+        function mudarCor(cor) {
+            titulo.style.color = cor;
+        }
+
+        // Adiciona eventos de clique aos botões
+        btnAzul.addEventListener('click', function() {
+            mudarCor('blue');
+        });
+
+        btnVerde.addEventListener('click', function() {
+            mudarCor('green');
+        });
+    </script>
+</body>
+</html>
